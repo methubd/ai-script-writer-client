@@ -15,7 +15,8 @@ const Banner = () => {
         const title = form.title.value;
         const synopsis = form.synopsis.value;
         const genre = form.genre.value;
-        const demandScript = {title, synopsis, genre}
+        const email = user?.email;
+        const demandScript = {title, synopsis, genre, email}
 
         if (user) {
             const res = axios.post('http://localhost:5000/scripts', demandScript)
@@ -46,14 +47,16 @@ const Banner = () => {
                 
                 {
                     user ?                     
-                    <Link className="bg-red-400 text-white text-normal font-bold px-8 py-5 rounded-lg active:bg-red-700 transition-colors hover:bg-red-300">Go to Dashboard</Link>
+                    <div className="py-5">
+                    <Link to='/dashboard' className="bg-red-400 text-white text-normal font-bold px-8 py-5 rounded-lg active:bg-red-700 transition-colors hover:bg-red-300 mt-11">Go to Dashboard</Link>
+                    </div>
                     :
                     <>
                     <button
                     onClick={()=>window.create_script_modal.showModal()}
                     className="bg-red-400 text-white text-normal font-bold px-8 py-5 rounded-lg active:bg-red-700 transition-colors hover:bg-red-300">Start Writing</button>
-                    <button
-                    className="px-8 py-5 border mx-4 border-white rounded-lg text-white text-normal font-bold active:text-red-700 active:border-red-700 transition-colors hover:border-red-300 hover:text-red-300">Log in</button>
+                    <Link to='/login'
+                    className="px-8 py-5 border mx-4 border-white rounded-lg text-white text-normal font-bold active:text-red-700 active:border-red-700 transition-colors hover:border-red-300 hover:text-red-300">Log in</Link>
                     </>
                 }
 

@@ -5,7 +5,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
-    console.log(user);
+    
     return (
         <nav className="fixed flex w-full justify-between items-center px-16 py-2 text-white">
             <div className="w-24">
@@ -15,7 +15,7 @@ const Navbar = () => {
                 <Link to='/'>About Us</Link>
                 { user ?
                     <>
-                    <Link>Dashboard</Link>
+                    <Link to='/dashboard'>Dashboard</Link>
                     <Link onClick={logOut}>Logout</Link>
                     </>
                     :
