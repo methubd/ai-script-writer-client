@@ -18,14 +18,14 @@ const SoftwareAdvantages = () => {
                 </div>
             </div>
             <div className="bg-slate-900 p-5 text-white flex items-start rounded-xl gap-4">
-                <img src="/public/offline.svg" alt="" />
+                <img src="/public/free.svg" alt="" />
                 <div>
                     <h1 className="font-bold text-xl pb-2">Free</h1>
                     <p>Enjoy the NOLAN free version while also influencing the further development of the product.</p>
                 </div>
             </div>
             <div className="bg-slate-900 p-5 text-white flex items-start rounded-xl gap-4">
-                <img src="/public/offline.svg" alt="" />
+                <img src="/public/secure.svg" alt="" />
                 <div>
                     <h1 className="font-bold text-xl pb-2">Secure</h1>
                     <p>Don’t worry, your screenplay is secure and encrypted with Nolan</p>

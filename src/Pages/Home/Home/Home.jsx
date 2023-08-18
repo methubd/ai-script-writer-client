@@ -1,12 +1,14 @@
 import Banner from "../Banner/Banner";
 import SoftwareAdvantages from "../SoftwareAdvantages/SoftwareAdvantages";
+import WhatIsNolan from "../WhatIsNolan/WhatIsNolan";
 
 
 const Home = () => {
     return (
-        <div className="bg-slate-500 h-screen">
+        <div className=" h-screen">
             <Banner></Banner>
             <SoftwareAdvantages></SoftwareAdvantages>
+            <WhatIsNolan></WhatIsNolan>
         </div>
     );
 };
