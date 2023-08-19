@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Dashboard from "../Layouts/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import MyScripts from "../Pages/Dashboard/MyScripts/MyScripts";
+import EditScript from "../Pages/Dashboard/EditScript/EditScript";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
             {
               path: '/dashboard/demo-scripts'
             },
+            {
+              path: '/dashboard/edit-script/:id',
+              element: <EditScript></EditScript>,
+              loader: ({params}) => fetch(`http://localhost:5000/specific-scripts/${params.id}`)
+            }
           ]
         }
       ]

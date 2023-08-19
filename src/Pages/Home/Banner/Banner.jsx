@@ -22,6 +22,13 @@ const Banner = () => {
             const res = axios.post('http://localhost:5000/scripts', demandScript)
             console.log(res.data);
             form.reset();
+
+            swal({
+                title: "It's working...",
+                text: "Our AI Writer will take some time, so keep patience for a moment.",
+                timer: 10000
+              });
+            navigate('/dashboard/my-scripts')
         }
         else{
             swal({
@@ -29,9 +36,12 @@ const Banner = () => {
                 text: "You have to login to generate a or ton of script.",
                 timer: 2000
               });
-            navigate('login')
+            navigate('/login')
         }
+        
     }
+
+    
 
     const handleCloseModal = () => {
         window.create_script_modal.close();
@@ -49,6 +59,9 @@ const Banner = () => {
                     user ?                     
                     <div className="py-5">
                     <Link to='/dashboard' className="bg-red-400 text-white text-normal font-bold px-8 py-5 rounded-lg active:bg-red-700 transition-colors hover:bg-red-300 mt-11">Go to Dashboard</Link>
+                    <button
+                    onClick={()=>window.create_script_modal.showModal()}
+                    className="bg-red-400 text-white text-normal font-bold px-8 py-5 rounded-lg active:bg-red-700 transition-colors hover:bg-red-300 ml-5">Start Writing</button>
                     </div>
                     :
                     <>
