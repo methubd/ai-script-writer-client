@@ -1,6 +1,6 @@
-###Project name: AI Script Writing Software
-#Technology stack: MERN Stack (MongoDB, Express.js, React.js, Node.js)
-#Project description: This project is an AI script writing software that can generate scripts for movies, TV shows, and other forms of media. The software uses a variety of techniques, including natural language processing and machine learning, to generate scripts that are both creative and original.
+### Project name: AI Script Writing Software
+# Technology stack: MERN Stack (MongoDB, Express.js, React.js, Node.js)
+# Project description: This project is an AI script writing software that can generate scripts for movies, TV shows, and other forms of media. The software uses a variety of techniques, including natural language processing and machine learning, to generate scripts that are both creative and original.
 Project goals: The goals of this project are to:
 Develop an AI script writing software that can generate high-quality scripts.
 Make the software easy to use and accessible to a wide range of users.
